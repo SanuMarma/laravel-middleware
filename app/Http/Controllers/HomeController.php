@@ -18,4 +18,9 @@ class HomeController extends Controller
     public function contact(){
     	return view('sub.sub-sub.contact');	
     }
+
+    public function login(){
+        return view('login');
+    }
+
 }
