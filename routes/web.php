@@ -13,3 +13,7 @@ Route::post('loginStore', 'HomeController@loginStore');
 
 Route::get('logout', 'HomeController@logout');
 
+Route::group(['middleware' => 'logged'], function(){
+	Route::get('dashboard', 'HomeController@dashboard');
+});
+
