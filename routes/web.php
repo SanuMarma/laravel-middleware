@@ -11,3 +11,5 @@ Route::get('login', 'HomeController@login');
 
 Route::post('loginStore', 'HomeController@loginStore');
 
+Route::get('logout', 'HomeController@logout');
+
