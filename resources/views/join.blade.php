@@ -14,11 +14,14 @@
 				<th>DIVISION</th>
 			</thead>
 			<tbody>
+				@foreach($data as $d)
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>{{ $d->id }}</td>
+					<td>{{ $d->district }}</td>
+					<td>{{ $d->division }}</td>
 				</tr>
+				@endforeach
+				
 			</tbody>
 		</table>
 	</div>
