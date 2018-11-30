@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Session;
+use DB;
 use App\User;
 
 class HomeController extends Controller
@@ -57,5 +58,14 @@ class HomeController extends Controller
 
      public function dashboard(){
         return view('dashboard');
+     }
+
+     public function join(){
+        $data = DB::table('districts')
+                    ->join('divisions','districts.division_id','divisions.id')
+                    ->select('districts.id','districts.name as division','divisions.name as district')
+                    ->get();
+                
+        return view('join');
      }
 }

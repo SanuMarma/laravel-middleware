@@ -17,3 +17,4 @@ Route::group(['middleware' => 'logged'], function(){
 	Route::get('dashboard', 'HomeController@dashboard');
 });
 
+Route::get('join', 'HomeController@join');
