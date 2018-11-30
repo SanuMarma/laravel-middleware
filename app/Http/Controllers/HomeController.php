@@ -23,4 +23,10 @@ class HomeController extends Controller
         return view('login');
     }
 
+    public function loginStore(Request $request){
+        echo $request->email;
+        echo '<br>';
+        echo $request->password;
+    }
+
 }
